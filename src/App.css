@@ -1,38 +1,139 @@
-.App {
-  text-align: center;
+* {
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.todo-wrapper { 
+  max-width: 30%;
+  width: 90%;
+  min-width: 300px;
+  margin: 50px auto;
+  padding: 50px 25px;
+  box-shadow: 0px 15px 25px rgba(168, 168, 168, 0.685);
+  font-size: 16px;
+  border-radius: 7px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.textbox-btn-wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+}
+
+.add-todo__input {
+  width: 65%;  
+  padding: 15px;
+  border: 1px solid #ababab;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+  border-right: none;
+  outline: none;
+}
+
+.add-todo__button {
+  padding: 16.5px 15px;
+  background: #4bb543;;
+  color: #fff;
+  font-weight: 600;
+  border: none;  
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+}
+.max-length {
+  color: red;
+  font-size: 10px;
+  margin-top: 3px;
+  letter-spacing: .3px;
+}
+.populate-list__text {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 40px;
+  padding: 0;
+}
+
+
+
+.todo-list__container ul {
+  padding: 15px 0px;
+  margin-top: 20px;
+}
+
+.todo-list__container li {
+  list-style: none;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(168, 168, 168, 0.685);
+}
+.item-name {
+  width: 42%;
+}
+.item-name p {
+  margin: 0;
+  text-transform: capitalize;
+}
+.in-progress__checkbox label, .completed__checkbox label, .item-name p {  
+  font-size: 13px;
+  letter-spacing: .2px;
+}
+.in-progress__checkbox {
+  color: #FFC000;
+  margin-top: -5px;
+}
+
+.completed__checkbox label {
+  color: #4bb543;
+}
+
+.checked-status-btns {
+  width: 25.5%;
+}
+.in-progress-btns {
+  display: flex;
+  justify-content: space-between;
+}
+.in-progress-btns .edit {
+  border: rgb(168 168 168 / 69%);
+  padding: 3px 7px;
+  border-radius: 5px;
+}
+.in-progress-btns .delete {
+  border: red;
+  background: red;
+  color: #fff;  
+  padding: 3px 5px;
+  border-radius: 5px;
+}
+.completed-btns {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+}
+.completed-btns .delete {
+  border: red;
+  background: red;
+  color: #fff;  
+  padding: 5px 15px;
+  border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+
+.edit-popup__container {
+  background: #fff;
+  padding: 50px 25px;
+  box-shadow: 0px 15px 25px rgba(168, 168, 168, 0.685);  
+  position: absolute;
+  top: 30%;
+  left: 43%;
+  z-index: 5;
+}
+.edit-popup__container input {
+  padding: 5px;
+}
+.popup-edit-btns {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width: 700px) {
+  .edit-popup__container{
+    left: 20%;
   }
 }
